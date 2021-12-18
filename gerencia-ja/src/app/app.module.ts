@@ -5,9 +5,11 @@ import { RouterModule } from '@angular/router';
 import CheckLogged from './checkLogged.canactivate';
 
 import { AppComponent } from './app.component';
-import { PrincipalModule } from './principal/principal.module';
 import { TelaLoginComponent } from './tela-login/tela-login.component';
 import { FormsModule } from '@angular/forms';
+import { PrincipalModule } from './principal/principal.module';
+import { GerenciamentoPedidoModule } from './gerenciamento-pedido/gerenciamento-pedido.module';
+import { ListaClientesModule } from './lista-clientes/lista-clientes.module';
 
 
 @NgModule({
@@ -24,8 +26,10 @@ import { FormsModule } from '@angular/forms';
     }
   ]),
     BrowserModule,
+    FormsModule,
     PrincipalModule,
-    FormsModule
+    GerenciamentoPedidoModule,
+    ListaClientesModule
   ],
   providers: [CheckLogged],
   bootstrap: [AppComponent]

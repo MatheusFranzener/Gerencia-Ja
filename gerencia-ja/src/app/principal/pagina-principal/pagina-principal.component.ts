@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pagina-principal',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginaPrincipalComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
+  }
+
+  funcaoCliente(){
+    this.router.navigate(['/pagina-principal/clientes/'])
+  }
+
+  funcaoProdutos(){
+    this.router.navigate(['/pagina-principal/produtos/'])
+  }
+
+  funcaoPedidos(){
+    this.router.navigate(['/pagina-principal/pedido/'])
   }
 
 }

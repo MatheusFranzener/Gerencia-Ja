@@ -9,6 +9,7 @@ import { Router } from '@angular/router';
 export class TelaLoginComponent implements OnInit {
 
   user =  '';
+  password = '';
 
   constructor(private router: Router) { }
 
@@ -17,7 +18,8 @@ export class TelaLoginComponent implements OnInit {
 
   logar(){
     localStorage.setItem('USER',this.user);
-    this.router.navigate(['/principal/pagina-principal'])
+    localStorage.setItem('PASSWORD',this.password);
+    this.router.navigate(['/pagina-principal/'])
   }
 
 }
