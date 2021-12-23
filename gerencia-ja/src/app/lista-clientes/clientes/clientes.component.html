@@ -1,3 +1,16 @@
-<p>
-  clientes works!
-</p>
+<div>
+  <h1>
+    Clientes: 
+  </h1>
+
+  <ul>
+    <div *ngFor="let produto of listaCliente">
+      <li>{{produto.codigo}} {{produto.nome}} {{produto.preco}}</li>
+    </div>
+  </ul>
+
+  <button (click)="addCliente()">Adicionar Cliente</button>
+
+  <button (click)="voltarPrincipal()">Voltar</button>
+
+</div>

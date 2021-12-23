@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import * as myGlobals from "../../globals"
 
 @Component({
   selector: 'app-clientes',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClientesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router,) { }
 
   ngOnInit() {
+  }
+
+  listaCliente = myGlobals.listaClientes;
+
+  addCliente(){
+    this.router.navigate(['/pagina-principal/clientes/cliente'])
+  }
+
+  voltarPrincipal(){
+    this.router.navigate(['/pagina-principal']);
   }
 
 }

@@ -1,0 +1,48 @@
+.telaLogin{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixaLogin{
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: lightblue;
+    width: 500px;
+    height: 350px;
+}
+
+.tituloCaixaLogin{
+    margin-top: -90px;
+}
+
+.loginNome{
+    margin-top: 5px;
+}
+
+.loginSenha{
+    margin-top: 5px;
+}
+
+.inputNome{
+    width: 250px;
+    height: 20px;
+}
+
+.inputSenha{
+    width: 250px;
+    height: 20px;
+}
+
+.botaoEntrar{
+    width: 60px;
+    height: 25px;
+    background-color: seagreen;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    margin-left: 200px;
+}

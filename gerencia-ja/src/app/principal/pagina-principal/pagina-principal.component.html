@@ -1,8 +1,16 @@
-<div>
-  Aqui vai a página principal: 
+<div class="principal">
+  <div class="funcionalidades">
+    <h1>Funcionalidades do Gerencia-Já</h1>
+  </div>
 
-  <button (click)="funcaoCliente()" >Cliente</button>
-  <button (click)="funcaoProdutos()">Produtos</button>
-  <button (click)="funcaoPedidos()">Pedidos</button>
+  <div class="botoes">
+    <button (click)="funcaoCliente()" class="botaoCliente">Cliente</button>
+    <button (click)="funcaoProdutos()" class="botaoProdutos">Produtos</button>
+    <button (click)="funcaoPedidos()" class="botaoPedidos">Pedidos</button>
+  </div>
 
+  <div class="logout">
+    <button (click)="fazerLogout()">Logout</button>
+  </div>
+  
 </div>

@@ -1,3 +1,20 @@
-<p>
-  produto works!
-</p>
+<div>
+  <h1>Adicionar Produto</h1>
+  <div class="campos">
+    <span>Código</span>
+    <br>
+    <input [(ngModel)]="codigoProduto">
+    <br>
+    <span>Nome</span>
+    <br>
+    <input [(ngModel)]="nomeProduto">
+    <br>
+    <span>Preco</span>
+    <br>
+    <input [(ngModel)]="precoProduto">
+    <br>
+    <button class="cadastrar" (click)="adicionarLista()">Cadastrar</button>
+
+    <button (click)="voltarProdutos()">Cancelar</button>
+  </div>
+</div>

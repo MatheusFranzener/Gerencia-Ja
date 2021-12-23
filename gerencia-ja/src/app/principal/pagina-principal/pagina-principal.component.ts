@@ -25,4 +25,8 @@ export class PaginaPrincipalComponent implements OnInit {
     this.router.navigate(['/pagina-principal/pedido/'])
   }
 
+  fazerLogout(){
+    this.router.navigate([''])
+  }
+
 }

@@ -8,6 +8,7 @@ import CheckLogged from '../checkLogged.canactivate';
 import { ClientesComponent } from '../lista-clientes/clientes/clientes.component';
 import { ClienteComponent } from '../lista-clientes/cliente/cliente.component';
 import { PedidoComponent } from '../gerenciamento-pedido/pedido/pedido.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -33,7 +34,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    FormsModule
   ],
   declarations: [PaginaPrincipalComponent, ProdutosComponent, ProdutoComponent],
   exports: [PaginaPrincipalComponent, ProdutosComponent, ProdutoComponent],

@@ -1,3 +1,14 @@
-<p>
-  produtos works!
-</p>
+<div>
+  <h1>Produtos: </h1>
+
+  <ul>
+    <div *ngFor="let produto of listaProduto">
+      <li>{{produto.nome}} {{produto.codigo}} {{produto.preco}}</li>
+    </div>
+  </ul>
+
+  <button (click)="voltarPrincipal()">Voltar</button>
+
+  <button (click)="addProduto()">Adicionar Produto</button>
+  
+</div>

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import * as myGlobals from "../../globals"
 
 @Component({
   selector: 'app-produto',
@@ -7,9 +9,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProdutoComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router) { }
 
   ngOnInit() {
+  }
+
+  voltarProdutos(){
+    this.router.navigate(['/pagina-principal/produtos'])
+  }
+
+  codigoProduto = "";
+  nomeProduto = "";
+  precoProduto = "";
+
+
+  adicionarLista() {
+    myGlobals.listaProdutos.push({codigo: this.codigoProduto, nome: this.nomeProduto, preco: this.precoProduto});
+    console.log(myGlobals.listaProdutos);
+    this.router.navigate(["/pagina-principal/produtos"]);
   }
 
 }

@@ -1,3 +1,20 @@
-<p>
-  cliente works!
-</p>
+<div>
+  <h1>Adicionar Cliente</h1>
+  <div class="campos">
+    <span>Código</span>
+    <br>
+    <input [(ngModel)]="codigoCliente">
+    <br>
+    <span>Nome</span>
+    <br>
+    <input [(ngModel)]="nomeCliente">
+    <br>
+    <span>Idade</span>
+    <br>
+    <input [(ngModel)]="idadeCliente">
+    <br>
+    <button class="cadastrar" (click)="adicionarLista()">Cadastrar</button>
+
+    <button (click)="voltarClientes()">Cancelar</button>
+  </div>
+</div>
