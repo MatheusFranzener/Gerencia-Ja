@@ -1,3 +1,23 @@
-<p>
-  pedido works!
-</p>
+<div>
+  <select #a (change) = 'select(a.value)' id="cliente">
+    <option value="">Selecionar Cliente</option>
+  </select>
+
+  <select #b (change) = 'select2(b.value)' id="produto">
+    <option value="">Selecionar Produto</option>
+  </select>
+
+  <input type="number" value= "1" (change) = 'funcaoQtd()'>
+  <span>Valor Total do Pedido: {{valorTotal}} </span>
+
+  <div>
+     <span>Status do Pedido: {{status}} </span>
+  </div>
+
+  <button (click)="voltarPrincipal()">Voltar</button>
+  <button>Finalizar Orçamento</button>
+
+
+</div>
+
+

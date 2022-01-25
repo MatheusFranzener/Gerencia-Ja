@@ -9,6 +9,7 @@ import { ClientesComponent } from '../lista-clientes/clientes/clientes.component
 import { ClienteComponent } from '../lista-clientes/cliente/cliente.component';
 import { PedidoComponent } from '../gerenciamento-pedido/pedido/pedido.component';
 import { FormsModule } from '@angular/forms';
+import { PedidosComponent } from '../gerenciamento-pedido/pedidos/pedidos.component';
 
 const routes: Routes = [
   {
@@ -23,10 +24,16 @@ const routes: Routes = [
       {
         path: "clientes", children: [
           { path: "", component: ClientesComponent },
-          { path: ":id", component: ClienteComponent }
+          { path: ":codigo", component: ClienteComponent }
         ]
       },
-      { path: "pedido", component: PedidoComponent }
+      {
+         path: "pedidos", children:[
+           {path:"", component: PedidosComponent},
+           {path: ":codigo", component: PedidoComponent}
+         ] 
+        
+    }
     ]
   }
 ]

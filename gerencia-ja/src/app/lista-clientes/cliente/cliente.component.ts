@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router,ActivatedRoute } from '@angular/router';
 import * as myGlobals from "../../globals"
 
 @Component({
@@ -9,9 +9,12 @@ import * as myGlobals from "../../globals"
 })
 export class ClienteComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private route: ActivatedRoute, private router:Router) {
+    this.codigoCliente = route.snapshot.paramMap.get('codigo');
+   }
 
   ngOnInit() {
+    this.verificarProduto();
   }
 
   voltarClientes(){
@@ -21,11 +24,43 @@ export class ClienteComponent implements OnInit {
   codigoCliente = "";
   nomeCliente = "";
   idadeCliente = "";
+  contagem = 0;
+
+  verificarProduto(){
+    var self = this
+    myGlobals.listaClientes.forEach(function(e) {
+      if(e.codigo == self.codigoCliente){
+        self.nomeCliente = e.nome;
+        self.idadeCliente = e.idade;
+        self.contagem = 1;
+      }
+    })
+  }
+
+  editar(){
+    var self = this;
+
+    localStorage.setItem('codigoCliente', '')
+    localStorage.setItem('nomeCliente', '')
+    localStorage.setItem('idadeCliente', '')
+
+    myGlobals.listaClientes.forEach(function(e) {
+      if(e.codigo == self.codigoCliente){
+        e.nome = self.nomeCliente;
+        e.idade = self.idadeCliente;
+      }
+    })
+  }
 
 
   adicionarLista() {
-    myGlobals.listaClientes.push({codigo: this.codigoCliente, nome: this.nomeCliente, preco: this.idadeCliente});
-    console.log(myGlobals.listaClientes);
+    if(this.contagem == 1){
+      this.editar()
+    } else {
+      myGlobals.listaClientes.push({codigo: this.codigoCliente, nome: this.nomeCliente, idade: this.idadeCliente});
+      console.log(myGlobals.listaClientes);
+    }
+        
     this.router.navigate(["/pagina-principal/clientes"]);
   }
 

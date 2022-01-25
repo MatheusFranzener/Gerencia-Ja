@@ -22,7 +22,7 @@ export class PaginaPrincipalComponent implements OnInit {
   }
 
   funcaoPedidos(){
-    this.router.navigate(['/pagina-principal/pedido/'])
+    this.router.navigate(['/pagina-principal/pedidos/'])
   }
 
   fazerLogout(){

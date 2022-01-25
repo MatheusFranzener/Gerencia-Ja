@@ -3,14 +3,10 @@
     Clientes: 
   </h1>
 
-  <ul>
-    <div *ngFor="let produto of listaCliente">
-      <li>{{produto.codigo}} {{produto.nome}} {{produto.preco}}</li>
-    </div>
-  </ul>
-
-  <button (click)="addCliente()">Adicionar Cliente</button>
+  <table></table>
 
   <button (click)="voltarPrincipal()">Voltar</button>
 
+  <button (click)="addCliente()">Adicionar Cliente</button>
+  
 </div>
