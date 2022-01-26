@@ -70,7 +70,6 @@ export class PedidoComponent implements OnInit {
         self.valorTotal = self.quantidade*e.preco;
       }
     })
-   
   }
 
   funcaoQtd(){
@@ -88,8 +87,6 @@ export class PedidoComponent implements OnInit {
     this.router.navigate(['/pagina-principal']);
   }
 
-  finalizarOrçamento(){
-    
+  finalizarOrçamento(){ 
   }
-
 }
