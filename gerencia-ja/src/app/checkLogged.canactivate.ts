@@ -29,7 +29,9 @@ class CheckLogged implements CanActivate {
         let usuarios = [
             { user: "Matheus Franzener", password: "matheus123" }, 
             { user: "Felipe Vieira", password: "felipe123" }, 
-            { user: "Kenzo Sato", password: "kenzo123" }
+            { user: "Kenzo Sato", password: "kenzo123" },
+            { user: "Hedlinn Hohmann", password: "hedlinn123"},
+            { user: "Fabiane Franzener", password: "fabiane123"}
         ];
 
         usuarios.forEach(function(element){
